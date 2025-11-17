@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49bb90b9e2ea631f08ddba91d72e509f, type: 3}
+  m_Name: InitialNarrative
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - speakerName: NARRATOR
+    speakerType: 0
+    dialogueText: "En el año 2099, la humanidad vive dentro del Ciberdojo, un sistema virtual controlado por código puro."
+    autoAdvanceDelay: 0
+  - speakerName: NARRATOR
+    speakerType: 0
+    dialogueText: "Pero todo cambió cuando apareció The Syntax Error, un virus que ha infectado el mundo digital."
+    autoAdvanceDelay: 0
+  - speakerName: SYSTEM
+    speakerType: 1
+    dialogueText: "Mis sistemas están fallando.. Los Bugs están por todas partes. Necesito a alguien que pueda escribir código perfecto."
+    autoAdvanceDelay: 0
+  - speakerName: ZEVEN
+    speakerType: 2
+    dialogueText: "Soy Zeven. He entrenado toda mi vida para este momento. Usaré mis habilidades de programación para eliminar cada Bug."
+    autoAdvanceDelay: 0
+  - speakerName: SYSTEM
+    speakerType: 1
+    dialogueText: "¡Prepárate, Zeven! Tu primer enemigo se acerca. Recuerda: cada línea de código cuenta."
+    autoAdvanceDelay: 0
