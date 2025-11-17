@@ -185,14 +185,13 @@ public class DialogueSystem : MonoBehaviour
             dialoguePanel.SetActive(false);
         }
 
-        // Load next scene (CiberDojo)
-        SceneRouter.Instance?.LoadCiberDojo();
+        // Load next scene (CiberDojo) after a short delay
+        StartCoroutine(LoadNextSceneAfterDelay(0.5f));
     }
 
-    public void LoadInitialNarrative()
+    private System.Collections.IEnumerator LoadNextSceneAfterDelay(float delay)
     {
-        // This will be called from the scene or another manager
-        // For now, you can create a DialogueSequence asset and assign it
-        Debug.Log("Load initial narrative - Assign a DialogueSequence asset to load it");
+        yield return new WaitForSeconds(delay);
+        SceneRouter.Instance?.LoadCiberDojo();
     }
 }
