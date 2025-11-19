@@ -42,3 +42,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Fondo
+    uniqueID: 3292862195
+    locked: 0
+  - name: Decoracion
+    uniqueID: 2464705295
+    locked: 0
+  - name: Jugador
+    uniqueID: 1134120755
+    locked: 0
+  - name: Frente
+    uniqueID: 1628329761
+    locked: 0
