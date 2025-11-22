@@ -21,7 +21,6 @@ public class DialogueSystem : MonoBehaviour
 
     [Header("Settings")]
     [SerializeField] private float textSpeed = 0.05f;
-    [SerializeField] private bool autoAdvance = false;
 
     private DialogueSequence currentSequence;
     private int currentLineIndex = 0;
@@ -114,15 +113,26 @@ public class DialogueSystem : MonoBehaviour
                 break;
         }
 
-        if (avatarSprite != null)
+        // Si no hay sprite asignado en el DialogueSystem, usar el sprite que ya tiene el Image
+        if (avatarSprite == null)
         {
-            avatarImage.sprite = avatarSprite;
-            avatarImage.enabled = true;
-        }
-        else
-        {
+            // Si el Image ya tiene un sprite (como Frame_0), mantenerlo y activarlo
+            if (avatarImage.sprite != null)
+            {
+                avatarImage.enabled = true;
+                Debug.Log($"Avatar: Usando sprite por defecto del Image ({avatarImage.sprite.name}) para {speakerType}");
+                return;
+            }
+            // Si no tiene sprite, desactivar
+            Debug.LogWarning($"Avatar: No hay sprite asignado para {speakerType} y el Image tampoco tiene sprite");
             avatarImage.enabled = false;
+            return;
         }
+
+        // Asignar el sprite y activar
+        avatarImage.sprite = avatarSprite;
+        avatarImage.enabled = true;
+        Debug.Log($"Avatar: Mostrando sprite para {speakerType}");
     }
 
     private IEnumerator TypeText(string text)
@@ -192,6 +202,14 @@ public class DialogueSystem : MonoBehaviour
     private System.Collections.IEnumerator LoadNextSceneAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
-        SceneRouter.Instance?.LoadCiberDojo();
+        // Volver al menú principal después de la narrativa
+        if (SceneRouter.Instance != null)
+        {
+            SceneRouter.Instance.LoadMainMenu();
+        }
+        else
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
+        }
     }
 }
