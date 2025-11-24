@@ -16,35 +16,35 @@ public class CreateInitialNarrative : EditorWindow
             {
                 speakerName = "NARRATOR",
                 speakerType = DialogueSequence.SpeakerType.Narrator,
-                dialogueText = "En el año 2099, la humanidad vive dentro del Ciberdojo, un sistema virtual controlado por código puro.",
+                dialogueText = "En la edad 2099, la humanidad vive dentro del Ciberdojo, un sistema virtual controlado por codigo puro.",
                 autoAdvanceDelay = 0f
             },
             new DialogueSequence.DialogueLine
             {
                 speakerName = "NARRATOR",
                 speakerType = DialogueSequence.SpeakerType.Narrator,
-                dialogueText = "Pero todo cambió cuando apareció The Syntax Error, un virus que ha infectado el mundo digital.",
+                dialogueText = "Pero todo cambio cuando aparecio The Syntax Error, un virus que ha infectado el mundo digital.",
                 autoAdvanceDelay = 0f
             },
             new DialogueSequence.DialogueLine
             {
                 speakerName = "SYSTEM",
                 speakerType = DialogueSequence.SpeakerType.System,
-                dialogueText = "Mis sistemas están fallando.. Los Bugs están por todas partes. Necesito a alguien que pueda escribir código perfecto.",
+                dialogueText = "Mis sistemas estan fallando.. Los virus estan por todas partes. Necesito a alguien que pueda limpiarlos.",
                 autoAdvanceDelay = 0f
             },
             new DialogueSequence.DialogueLine
             {
-                speakerName = "ZEVEN",
+                speakerName = "BYTE",
                 speakerType = DialogueSequence.SpeakerType.Zeven,
-                dialogueText = "Soy Zeven. He entrenado toda mi vida para este momento. Usaré mis habilidades de programación para eliminar cada Bug.",
+                dialogueText = "Soy Byte. He entrenado toda mi vida para este momento. Usare mis habilidades para eliminar cada Virus.",
                 autoAdvanceDelay = 0f
             },
             new DialogueSequence.DialogueLine
             {
                 speakerName = "SYSTEM",
                 speakerType = DialogueSequence.SpeakerType.System,
-                dialogueText = "¡Prepárate, Zeven! Tu primer enemigo se acerca. Recuerda: cada línea de código cuenta.",
+                dialogueText = "¡Preparate, Byte! Tu primer enemigo se acerca.",
                 autoAdvanceDelay = 0f
             }
         };
