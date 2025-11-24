@@ -468,7 +468,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 07bc6afe5187b1742864a16b3a4d20cb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -127808,6 +127808,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cofreCerrado: {fileID: 2060008849, guid: 4a109426276a9cd44afcfc8637885e45, type: 3}
   cofreAbierto: {fileID: 1450160854, guid: 4a109426276a9cd44afcfc8637885e45, type: 3}
+  itemPrefab: {fileID: 403896792012288026, guid: 7d822bc851241be4186d32373d041c97, type: 3}
 --- !u!1001 &2132998143
 PrefabInstance:
   m_ObjectHideFlags: 0
