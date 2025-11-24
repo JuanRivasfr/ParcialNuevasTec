@@ -59,6 +59,7 @@ public class SceneRouter : MonoBehaviour
     public void LoadBattleScene(int levelID)
     {
         currentLevelID = levelID;
+        Debug.Log($"SceneRouter: Loading battle scene '{battleScene}' for level {levelID}");
         LoadScene(battleScene);
     }
 

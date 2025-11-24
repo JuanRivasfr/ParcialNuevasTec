@@ -33,11 +33,11 @@ public class NeonButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
             outline = gameObject.AddComponent<Outline>();
         }
         
-        // Asegurar que hay un Shadow para el efecto glow
-        shadow = GetComponent<Shadow>();
+        // Asegurar que hay un Shadow para el efecto glow (ShadowUI de UnityEngine.UI)
+        shadow = GetComponent<UnityEngine.UI.Shadow>();
         if (shadow == null)
         {
-            shadow = gameObject.AddComponent<Shadow>();
+            shadow = gameObject.AddComponent<UnityEngine.UI.Shadow>();
         }
         
         SetupNeonStyle();

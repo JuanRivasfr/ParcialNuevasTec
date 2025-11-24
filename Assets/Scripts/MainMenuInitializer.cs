@@ -2,6 +2,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 [ExecuteInEditMode]
 public class MainMenuInitializer : MonoBehaviour
@@ -166,7 +169,7 @@ public class MainMenuInitializer : MonoBehaviour
 
         // Asignar referencias de botones usando SerializedObject
         #if UNITY_EDITOR
-        UnityEditor.SerializedObject serializedController = new UnityEditor.SerializedObject(controller);
+        SerializedObject serializedController = new SerializedObject(controller);
         serializedController.FindProperty("startButton").objectReferenceValue = createdButtons[0];
         serializedController.FindProperty("continueButton").objectReferenceValue = createdButtons[1];
         serializedController.FindProperty("historiaButton").objectReferenceValue = createdButtons[2];

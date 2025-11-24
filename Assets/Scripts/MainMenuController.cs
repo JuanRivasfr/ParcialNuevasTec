@@ -51,21 +51,21 @@ public class MainMenuController : MonoBehaviour
         }
         else
         {
-            LoadScene(startSceneName);
+        LoadScene(startSceneName);
         }
     }
 
     public void OnContinueClicked()
     {
         Debug.Log("Continuar partida");
-        // Cargar el último checkpoint guardado (CiberDojo)
+        // Volver a la narrativa (ya que no hay CiberDojo)
         if (SceneRouter.Instance != null)
         {
-            SceneRouter.Instance.LoadCiberDojo();
+            SceneRouter.Instance.LoadIntroNarrativa();
         }
         else
         {
-            LoadScene(continueSceneName);
+            LoadScene(historiaSceneName);
         }
     }
 
@@ -78,7 +78,7 @@ public class MainMenuController : MonoBehaviour
         }
         else
         {
-            LoadScene(historiaSceneName);
+        LoadScene(historiaSceneName);
         }
     }
 
@@ -91,7 +91,7 @@ public class MainMenuController : MonoBehaviour
         }
         else
         {
-            LoadScene(tutorialSceneName);
+        LoadScene(tutorialSceneName);
         }
     }
 
@@ -104,7 +104,7 @@ public class MainMenuController : MonoBehaviour
         }
         else
         {
-            LoadScene(settingsSceneName);
+        LoadScene(settingsSceneName);
         }
     }
 
